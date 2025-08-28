@@ -1,0 +1,63 @@
+/* Ensure the prod-navbar is positioned below the header */
+.prod-navbar {
+    width: 100%;
+    background-color: #333;  /* Dark background for the navbar */
+    position: absolute;  /* Placing it directly below the header */
+    position: fixed;  /* Fixed position to keep it in view while scrolling */
+    top: 80px;  /* This is the height of the header, adjust if needed */
+    left: 0;
+    display: flex;
+    justify-content: flex-start;  /* Align buttons to the left */
+    padding: 15px 20px;  /* Add padding to the left and right */
+    z-index: 999;  /* Ensure it stays below the header */
+  }
+  
+  /* Container for the navbar buttons */
+  .prod-nav-content {
+    display: flex;
+    justify-content: flex-start;  /* Align items to the left */
+    margin-left: 45px;  /* Space from the left edge */
+    gap: 25px;  /* Space between buttons */
+    max-width: 1200px;  /* Limit the width of the navbar */
+    width: 100%;  /* Allow the content to fill the width */
+  }
+  
+  /* Button styling */
+  .prod-nav-button {
+    background-color: #444;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+    min-width: 150px;  /* Ensures a consistent minimum width for buttons */
+    /* Remove unnecessary width rule to ensure buttons shrink and expand based on content */
+  }
+  
+  .prod-nav-button a {
+    color: white;
+    text-decoration: none;  /* Remove underline */
+    display: block;
+    width: 100%;  /* Ensures the whole button is clickable */
+  }
+  
+  .prod-nav-button:hover {
+    background-color: #666;  /* Change background color on hover */
+    transform: scale(1.05);  /* Slightly increase button size on hover */
+  }
+  .prod-nav-button.active {
+    background-color: #076bbd;  /* Active tab background */
+    font-weight: bold;  /* Make active tab text bold */
+  }
+  
+  .prod-nav-button:focus {
+    outline: none;  /* Remove the default focus outline */
+  }
+  

@@ -1,0 +1,152 @@
+.navbar-01 {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 20px;
+background-color: #333;
+color: white;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+.navbar-logo a {
+text-decoration: none;
+color: white;
+font-size: 24px;
+padding-left: 30px;
+}
+
+.navbar-search {
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.navbar-search input {
+padding: 8px 16px;
+margin-left: auto;
+font-size: 16px;
+border-radius: 20px;
+border: none;
+width: 50%;
+outline: none;
+}
+
+.search-button {
+padding: 8px 16px;
+max-width: 120px;
+font-size: 16px;
+background-color: #3d5672;
+color: white;
+border: none;
+border-radius: 20px;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+
+.search-button:hover {
+background-color: #0056b3;
+}
+
+/* Profile Container */
+.profile-container {
+position: relative;
+display: flex;
+align-items: center;
+margin-right: 20px;
+cursor: pointer;
+}
+
+/* Profile Item with text and image */
+.profile-item {
+display: flex;
+align-items: center;
+background-color: #444; /* Slightly darker background for profile item */
+padding: 8px 12px;
+border-radius: 12px;
+height: 40px; /* Ensure the height is the same as the cart button */
+}
+
+.profile-pic {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-color: #ccc; /* Placeholder background color */
+margin-right: 10px;
+}
+
+/* Profile Text */
+.profile-text {
+color: white;
+font-size: 16px;
+margin-right: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+position: absolute;
+top: 50px;
+right: 0;
+background-color: white;
+color: black;
+border-radius: 8px;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+min-width: 120px;
+display: flex;
+flex-direction: column;
+gap: 5px; /* Reduced gap between dropdown buttons */
+padding: 10px 0;
+}
+
+/* Styling for the buttons in the dropdown */
+.dropdown-menu button,
+.dropdown-menu a {
+padding: 10px;
+text-align: center;
+text-decoration: none;
+background: none;
+border: none;
+cursor: pointer;
+width: 100%;
+display: block;
+font-size: 14px;
+border-radius: 5px;
+color: #333; /* Color for text */
+background-color: #f8f8f8; /* Light background for buttons */
+}
+
+/* Cart Button Styling */
+.navbar-links {
+display: flex;
+align-items: center;
+margin-right: 30px; /* Ensures 30px spacing from the right */
+gap: 15px; /* Add spacing between buttons */
+}
+
+.navbar-links button {
+background-color: #0b5fcc;
+color: white;
+border: none;
+padding: 8px 30px; /* Adjust padding to fit content */
+border-radius: 12px;
+height: 40px;
+cursor: pointer;
+font-size: 16px;
+display: inline-block;
+width: auto;
+min-width: unset;
+white-space: nowrap;
+text-decoration: none;
+}
+
+.navbar-links a {
+color: inherit; /* Ensures the link takes the button color */
+text-decoration: none; /* Removes underline */
+display: inline-block;
+}

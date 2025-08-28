@@ -1,0 +1,8 @@
+ProductUi files [all commented to avoid errors]
+
+frontend -> tailwind.css, tailwind config, logo
+src -> ProductUiRoot folder -> original location in src
+component -> productUi -> original location in component [3 folders]
+service -> ProductUi -> original location in service
+
+app.jsx file not added {used previously ones}

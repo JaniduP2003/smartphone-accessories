@@ -1,0 +1,46 @@
+SHOW DATABASES;
+USE SEProject;
+
+SHOW TABLES;
+DESCRIBE users;
+
+Select * from admins;
+SELECT * FROM customers;
+select * from users;
+
+drop table users;
+drop table customers;
+drop table products;
+drop table cart_items;
+
+DELETE FROM users WHERE id = 6;
+DELETE FROM customers WHERE id = 6;
+
+############################################################
+
+select * from products;
+INSERT INTO products (pname, description, price, image_Url, category, brand, quantity, colour) 
+VALUES 
+('iPhone 14', 'Latest Apple smartphone', 999.99, 'https://example.com/iphone14.jpg', 'Smartphones', 'Apple', 50, 'Black, White, Blue'),
+
+('Samsung Galaxy S23', 'New Samsung flagship phone', 899.99, 'https://example.com/galaxyS23.jpg', 'Smartphones', 'Samsung', 30, 'Phantom Black, Green, Cream'),
+
+('Sony WH-1000XM5', 'Noise Cancelling Wireless Headphones', 399.99, 'https://example.com/sonyheadphones.jpg', 'Accessories', 'Sony', 20, 'Black, Silver'),
+
+('MacBook Pro M2', 'Apple MacBook Pro with M2 chip', 1499.99, 'https://example.com/macbookpro.jpg', 'Laptops', 'Apple', 15, 'Space Gray, Silver'),
+
+('Logitech MX Master 3', 'Advanced wireless mouse', 99.99, 'https://example.com/mxmaster3.jpg', 'Accessories', 'Logitech', 40, 'Graphite, Mid Gray'),
+
+('Dell XPS 15', 'High-performance Dell laptop', 1899.99, 'https://example.com/dellxps15.jpg', 'Laptops', 'Dell', 10, 'Silver, Black'),
+
+('Apple WH-1000XM5', 'Noise Cancelling Wireless Headphones', 399.99, 'https://example.com/sonyheadphones.jpg', 'Accessories', 'Apple', 20, 'Black, Silver'),
+
+('Apple WH-100tXM5', 'Noise Cancelling Wireless Headphones', 349.99, 'https://example.com/sonyheadphones.jpg', 'Accessories', 'Apple', 10, 'Blue, Silver'),
+
+('Apple WH-1000XM5', 'Wireless Headphones', 359.99, 'https://example.com/sonyheadphones.jpg', 'Accessories', 'Apple', 04, 'Black, Silver'),
+
+('Sony 14', 'Latest Sony smartphone', 999.99, 'https://example.com/iphone14.jpg', 'Smartphones', 'Sony', 50, 'Black, White, Blue');
+
+Delete from products where pid = 13;
+Delete from products where pid = 11;
+Delete from products where pid = 9;

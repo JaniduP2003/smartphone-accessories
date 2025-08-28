@@ -1,0 +1,309 @@
+/* General styles */
+.products {
+  font-family: Arial, sans-serif;
+  padding: 20px 20px 20px 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  padding-left: 0;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: black;
+}
+
+.add-product-btn {
+  padding: 10px 15px;
+  background-color: #af4c8b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-product-btn:hover {
+  background-color: #45a049;
+}
+
+/* General Table Styles */
+.table-container {
+  width: 100%;                // or try max-width: 80%;
+  max-width: 900px;           // or whatever suits your design
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.table-paper {
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  
+}
+
+.table-header {
+  background-color: #f5f5f5;
+  padding: 8px 16px;
+}
+
+.table-toolbar {
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.table-selected-info {
+  flex: 1 1 100%;
+}
+
+.table-cell {
+  font-size: 0.9rem;
+}
+
+.table-row:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+/* Enhanced Table Pagination */
+.table-pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.pagination-controls {
+  font-size: 0.9rem;
+}
+
+/* Styling for Switch (Dense Padding toggle) */
+.dense-switch {
+  margin-top: 16px;
+}
+
+/* Tooltip and Icon Button Styling */
+.icon-button {
+  padding: 8px;
+}
+
+/* Checkbox Styling */
+.checkbox-cell {
+  padding: 8px;
+}
+
+/* Make the TableHeader cell text bold */
+.table-header-cell {
+  font-weight: 600;
+}
+
+/* Styling for the selected rows in the table */
+.selected-row {
+  background-color: #e3f2fd !important;
+}
+
+/* Add Product Modal */
+/* Modal Overlay */
+.MuiDialog-container {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(2px);
+}
+
+/* Modal Paper */
+.MuiDialog-paper {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+  overflow: hidden;
+}
+
+/* Form Elements */
+.add-product-form {
+  .MuiTextField-root, 
+  .MuiFormControl-root {
+    margin-bottom: 16px;
+
+    label {
+      color: #5f6368;
+      &.Mui-focused {
+        color: #1976d2;
+      }
+    }
+
+    .MuiOutlinedInput-root {
+      border-radius: 8px;
+
+      &:hover .MuiOutlinedInput-notchedOutline {
+        border-color: rgba(0, 0, 0, 0.3);
+      }
+
+      &.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: #1976d2;
+        border-width: 1px;
+      }
+    }
+
+    .MuiInputAdornment-positionStart {
+      margin-right: 0;
+    }
+  }
+
+  .MuiFormHelperText-root {
+    margin-left: 0;
+    font-size: 0.75rem;
+  }
+}
+
+/* Switch Styling */
+.in-stock-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+
+  .MuiFormControlLabel-label {
+    font-size: 0.875rem;
+    color: #5f6368;
+  }
+
+  .MuiSwitch-root {
+    padding: 8px;
+
+    .MuiSwitch-track {
+      background-color: #dadce0;
+      opacity: 1;
+      border-radius: 10px;
+    }
+
+    .MuiSwitch-thumb {
+      color: #ffffff;
+    }
+
+    &.Mui-checked {
+      .MuiSwitch-track {
+        background-color: rgba(25, 118, 210, 0.5);
+      }
+    }
+  }
+}
+
+/* Button Styling */
+.modal-actions {
+  padding: 16px 24px;
+  border-top: 1px solid #e0e0e0;
+
+  .MuiButton-root {
+    min-width: 100px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    transition: all 0.2s ease;
+
+    &.cancel-btn {
+      border: 1px solid #dadce0;
+      color: #3c4043;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        border-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &.submit-btn {
+      background-color: #1976d2;
+      color: white;
+      box-shadow: none;
+
+      &:hover {
+        background-color: #1565c0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      &:disabled {
+        background-color: rgba(0, 0, 0, 0.12);
+        color: rgba(0, 0, 0, 0.26);
+      }
+    }
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .MuiDialog-paper {
+    margin: 16px !important;
+    width: calc(100% - 32px) !important;
+  }
+
+  .add-product-form {
+    .form-row {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
+
+/* ---------------- PERSISTENT SIDEBAR (Always Visible) ---------------- */
+.sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #010f2a;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  text-align: center; /* Center-align text */
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0; /* Adjust the margin for smaller spacing */
+  font-weight: 500;
+  font-size: 1rem; /* Smaller font size */
+  padding: 11px 15px; /* Smaller padding for smaller boxes */
+  border-radius: 6px; /* Slightly smaller rounded corners */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.sidebar a:hover {
+  color: #61dafb; /* Change text color on hover */
+  background-color: #333; /* Highlight background color */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Slightly smaller shadow */
+  transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+.page-content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+/* Logo styling */
+.logo {
+  width: 1px;  /* Adjust width as needed */
+  height: auto;  /* Maintain aspect ratio */
+  margin-bottom: 20px;  /* Optional: Add space below the logo */
+}
+

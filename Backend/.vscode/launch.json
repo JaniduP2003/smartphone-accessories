@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MackTechApplication<MackTech>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.Group11.MackTech.MackTechApplication",
+            "projectName": "MackTech",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

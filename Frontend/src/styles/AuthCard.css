@@ -1,0 +1,320 @@
+/* Global Reset */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background: #ffffff;
+}
+
+/* Center the card on the page */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background: #ffffff; /* White background */
+}
+
+/* Main Container */
+.cont {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 900px;
+  height: 550px;
+  background: #fff;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(70, 70, 70, 0.15),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(70, 70, 70, 0.15);
+}
+
+/* Form Styling */
+.form {
+  position: relative;
+  width: 640px;
+  height: 100%;
+  transition: transform 1.2s ease-in-out;
+  padding: 50px 30px 0;
+}
+
+/* ADDED LATER, TO CENTER THE HEADING */
+h2 {
+  text-align: center;
+  margin-bottom: 30px; /* Space below the heading */
+  font-size: 24px; /* Set a reasonable font size */
+  color: #333; /* Darker text color for better visibility */
+}
+
+/* Sub-Container for Sign Up Form */
+.sub-cont {
+  overflow: hidden;
+  position: absolute;
+  left: 640px;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  padding-left: 260px;
+  background: #fff;
+  transition: transform 1.2s ease-in-out;
+}
+
+/* Toggle Sign Up Form */
+.cont.s--signup .sub-cont {
+  transform: translate3d(-640px, 0, 0);
+}
+
+/* Button Styling */
+button {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 36px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.submit {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: #3498db; /* Blue color */
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit:hover {
+  background: #2980b9; /* Darker blue on hover */
+}
+
+/* Input Field Styling */
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc; /* Line under input */
+  text-align: center;
+  outline: none;
+}
+
+input:focus {
+  border-bottom: 1px solid #3498db; /* Blue line on focus */
+}
+
+/* Forgot Password Link */
+.forgot-pass {
+  margin-top: 45px;
+  text-align: center;
+  margin-left: 240px; /* Center the link manually, after SPRINT 02*/
+
+  font-size: 12px;
+  color: #3498db; /* Blue color */
+  text-decoration: underline; /* Underline to indicate clickable */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: inline-block; /* Ensures only the text itself is clickable */
+  padding: 0; /* Remove any extra padding */
+}
+
+.forgot-pass:hover {
+  color: #2980b9; /* Darker blue on hover */
+}
+
+/* Image Section */
+.img {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  padding-top: 360px;
+}
+
+.img:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  background-image: url("ext.jpg");
+  opacity: 0.8;
+  background-size: cover;
+  transition: transform 1.2s ease-in-out;
+}
+
+.img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.cont.s--signup .img:before {
+  transform: translate3d(640px, 0, 0);
+}
+
+/* Image Text */
+.img__text {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  transition: transform 1.2s ease-in-out;
+}
+
+.img__text h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.img__text p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cont.s--signup .img__text.m--up {
+  transform: translateX(520px);
+}
+
+.img__text.m--in {
+  transform: translateX(-520px);
+}
+
+.cont.s--signup .img__text.m--in {
+  transform: translateX(0);
+}
+
+/* Image Button */
+.img__btn {
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  width: 100px;
+  height: 36px;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.img__btn:after {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+
+.img__btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s;
+}
+
+/* Hide Sign In button by default */
+.img__btn span.m--in {
+  transform: translateY(-72px);
+}
+
+/* Show Sign In button when in signup mode */
+.cont.s--signup .img__btn span.m--in {
+  transform: translateY(0);
+}
+
+/* Hide Sign Up button when in signup mode */
+.cont.s--signup .img__btn span.m--up {
+  transform: translateY(72px);
+}
+
+/* Label Styling */
+label {
+  display: block;
+  width: 260px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+
+label span {
+  font-size: 12px;
+  color: #cfcfcf;
+  text-transform: uppercase;
+}
+
+/* Forgot Password Modal */
+.forgot-password-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.modal-content .submit {
+  margin-top: 20px;
+}
+
+.modal-content .cancel {
+  margin-top: 10px;
+  background: #e74c3c;
+}
+
+.modal-content .cancel:hover {
+  background: #c0392b;
+}

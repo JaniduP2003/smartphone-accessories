@@ -1,0 +1,130 @@
+.products-container {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent any potential overflow */
+  }
+  
+  .products-header {
+    margin-bottom: 32px;
+  }
+  
+  .products-header h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 8px;
+  }
+  
+  .products-header p {
+    color: #6c757d;
+    font-size: 1.1rem;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 columns per row */
+    gap: 16px; /* Reduced gap to prevent potential overflow */
+    width: 100%;
+    background-color: rgba(243, 245, 239, 0.918);
+    box-sizing: border-box;
+  }
+  
+  /* Mobile devices (up to 575px) */
+  @media (max-width: 575px) {
+    .products-grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 15px;
+    }
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .products-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .products-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .products-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+  }
+  
+  /* FHD screens (1200px to 2199px) */
+  @media (min-width: 1200px) and (max-width: 2199px) {
+    .products-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+  }
+  
+  /* For very large screens (2200px and up) */
+  @media (min-width: 2200px) {
+    .products-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px;
+    }
+    
+    .products-container {
+      max-width: 2000px;
+      margin: 0 auto;
+    }
+  }
+  
+  .filter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+    gap: 12px;
+  }
+  
+  .sort-dropdown {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+  }
+
+  .brand-dropdown {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+  }
+  
+  .status-filter {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap; /* Ensure buttons wrap if needed */
+  }
+  
+  .filter-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #151616;
+    background: rgb(86, 119, 151);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
